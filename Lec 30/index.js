@@ -167,11 +167,12 @@ console.log("********")
 // 
 
 let arr = [10,20,30,40,50] 
-const newArray = arr.filter((val) =>{
-    if(val < 30)
-    {
-        return val
-    }
-})
+// const newArray = arr.filter((val) =>{
+//     if(val <= 30)
+//     {
+//         return val
+//     }
+// })
 
+const newArray = arr.filter((val)=> val<=30)
 console.log(newArray)
