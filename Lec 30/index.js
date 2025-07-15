@@ -141,14 +141,23 @@ console.log("********")
 // arr.forEach((val) => console.log(val))
 
 let arr = [10,20,30,40,50] 
-const newArray = arr.map(function(val){
-    console.log(val)
-})
+// const newArray = arr.map(function(val){
+//     console.log(val)
+//     return val
+// })
 
-// map + arrow function
-const newArray2 = arr.map((val) => {
-    console.log(`Jai Siya Ram ${val}`)
-})
+// // map + arrow function
+// const newArray2 = arr.map((val) => {
+//     console.log(`Jai Siya Ram ${val}`)
+//     return val
+// })
+
+// const newArray3 = arr.map((val)=> val*=10)
+
+// console.log(newArray)
+// console.log(newArray2)
+// console.log(newArray3)
+
 // Map()
 // 1. Always return a new array
 // 2. Map is used for updation, read, to perform certain operation, modification
