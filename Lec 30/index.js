@@ -140,7 +140,7 @@ console.log("********")
 
 // arr.forEach((val) => console.log(val))
 
-let arr = [10,20,30,40,50] 
+// let arr = [10,20,30,40,50] 
 // const newArray = arr.map(function(val){
 //     console.log(val)
 //     return val
@@ -162,3 +162,16 @@ let arr = [10,20,30,40,50]
 // 1. Always return a new array
 // 2. Map is used for updation, read, to perform certain operation, modification
 
+// Filter()
+// 1. Always return a new array
+// 
+
+let arr = [10,20,30,40,50] 
+const newArray = arr.filter((val) =>{
+    if(val < 30)
+    {
+        return val
+    }
+})
+
+console.log(newArray)
