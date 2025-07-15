@@ -119,13 +119,23 @@ console.log("********")
 
 // hello(arr)
 
+// let arr = [10,20,30,40,50]
+
+// function print(val)
+// {
+//     console.log(val)
+// }
+
+// const print2 = (val) =>
+// {
+//     console.log(val)
+// }
+
+
+// arr.forEach(print)
+// arr.forEach(print2)
+
 let arr = [10,20,30,40,50]
+// forEach + arrow function
 
-function print(val)
-{
-    console.log(val)
-}
-
-arr.forEach(print)
-
-
+arr.forEach((val) => console.log(val))
