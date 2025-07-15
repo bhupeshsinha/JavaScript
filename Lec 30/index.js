@@ -88,3 +88,12 @@ console.log("********")
 // console.log(newArray)   //SPREAD OPTR
 // console.log(newArray2)  //SPREAD OPTR
 
+
+// ***************************************************************************************************************************************************************************************************************************************
+
+let arr = [10,20,30,40,50]
+
+// CALLBACK Function: passing a function as an argument
+arr.forEach(function(val){
+    console.log(`Jai Siya Ram ${val}`)
+})   
