@@ -99,12 +99,33 @@ console.log("********")
 // })   
 
 
-function hello(){
-return
-}
+// function hello(){
+// return
+// }
 
 
-// Arrow Function
-const hello = () =>{
-return
+// let arr = [10,20,30,40,50]
+// // Arrow Function
+// const hello = () =>{
+// return 
+// }
+
+
+// let arr = [10,20,30,40,50]
+// // Arrow Function
+// const hello = (arr) =>{
+//     console.log(arr)
+// }
+
+// hello(arr)
+
+let arr = [10,20,30,40,50]
+
+function print(val)
+{
+    console.log(val)
 }
+
+arr.forEach(print)
+
+
