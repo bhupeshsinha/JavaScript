@@ -166,13 +166,42 @@ console.log("********")
 // 1. Always return a new array
 // 
 
-let arr = [10,20,30,40,50] 
-// const newArray = arr.filter((val) =>{
-//     if(val <= 30)
-//     {
-//         return val
-//     }
-// })
+// let arr = [10,20,30,40,50] 
+// // const newArray = arr.filter((val) =>{
+// //     if(val <= 30)
+// //     {
+// //         return val
+// //     }
+// // })
 
-const newArray = arr.filter((val)=> val<=30)
+// const newArray = arr.filter((val)=> val<=30)
+// console.log(newArray)
+
+
+// Reduce()
+// 1. Always return a new array
+// 2.
+
+
+let arr = [10,20,30,40,50] 
+
+let sum = 0;
+for(let i=0;i<arr.length;i++)
+{
+    sum+=arr[i]
+}
+
+console.log(sum)
+
+// const newArray = arr.reduce((accumulator, currentValue)=>{
+//     accumulator = accumulator+currentValue
+//     return accumulator
+// }, 0 )
+
+// const newArray = arr.reduce((acc, cur)=>{
+//     acc = acc+cur
+//     return acc
+// }, 0 )
+
+const newArray = arr.reduce((acc, cur) => acc+=cur, 0)
 console.log(newArray)
