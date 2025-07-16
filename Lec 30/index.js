@@ -259,3 +259,4 @@ const newArray = arr
                     .filter((val) => val.branch === 'CSE')
                     .map((val) => val.name)
 console.log(newArray)
+
