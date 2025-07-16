@@ -183,15 +183,15 @@ console.log("********")
 // 2.
 
 
-let arr = [10,20,30,40,50] 
+// let arr = [10,20,30,40,50] 
 
-let sum = 0;
-for(let i=0;i<arr.length;i++)
-{
-    sum+=arr[i]
-}
+// let sum = 0;
+// for(let i=0;i<arr.length;i++)
+// {
+//     sum+=arr[i]
+// }
 
-console.log(sum)
+// console.log(sum)
 
 // const newArray = arr.reduce((accumulator, currentValue)=>{
 //     accumulator = accumulator+currentValue
@@ -203,5 +203,20 @@ console.log(sum)
 //     return acc
 // }, 0 )
 
-const newArray = arr.reduce((acc, cur) => acc+=cur, 0)
+// const newArray = arr.reduce((acc, cur) => acc+=cur, 0)
+// console.log(newArray)
+
+let arr = [
+    {name: 'Rinku', course:'Btech', branch:'CSE'},
+    {name: 'Rohit', course:'Btech', branch:'Civil'},
+    {name: 'Virat', course:'Btech', branch:'CSE'},
+    {name: 'Mukesh', course:'Btech', branch:'Mechanical'},
+    {name: 'Axar', course:'Btech', branch:'Civil'},
+    {name: 'Jadeja', course:'Btech', branch:'CSE'},
+]
+
+const newArray = arr.filter((val)=> val.branch=='Civil')
 console.log(newArray)
+
+const newArray2 = arr.filter((val)=> val.branch=='CSE')
+console.log(newArray2)
