@@ -206,14 +206,14 @@ console.log("********")
 // const newArray = arr.reduce((acc, cur) => acc+=cur, 0)
 // console.log(newArray)
 
-let arr = [
-    {name: 'Rinku', course:'Btech', branch:'CSE'},
-    {name: 'Rohit', course:'Btech', branch:'Civil'},
-    {name: 'Virat', course:'Btech', branch:'CSE'},
-    {name: 'Mukesh', course:'Btech', branch:'Mechanical'},
-    {name: 'Axar', course:'Btech', branch:'Civil'},
-    {name: 'Jadeja', course:'Btech', branch:'CSE'},
-]
+// let arr = [
+//     {name: 'Rinku', course:'Btech', branch:'CSE'},
+//     {name: 'Rohit', course:'Btech', branch:'Civil'},
+//     {name: 'Virat', course:'Btech', branch:'CSE'},
+//     {name: 'Mukesh', course:'Btech', branch:'Mechanical'},
+//     {name: 'Axar', course:'Btech', branch:'Civil'},
+//     {name: 'Jadeja', course:'Btech', branch:'CSE'},
+// ]
 
 
 // filter() + arrow_function ()
@@ -233,15 +233,29 @@ let arr = [
 
 // console.log(newArray2)
 
-const newArray = arr.filter((val)=>{
-    let fullName=''
-    if(val.branch == "CSE")
-    {
-        fullName+=val.name
-        return fullName
-        //console.log(fullName)
-    }
-})
+// const newArray = arr.filter((val)=>{
+//     let fullName=''
+//     if(val.branch == "CSE")
+//     {
+//         fullName+=val.name
+//         return fullName
+//         //console.log(fullName)
+//     }
+// })
 
 
+// console.log(newArray)
+let arr = [
+    {name: 'Rinku', course:'Btech', branch:'CSE'},
+    {name: 'Rohit', course:'Btech', branch:'Civil'},
+    {name: 'Virat', course:'Btech', branch:'CSE'},
+    {name: 'Mukesh', course:'Btech', branch:'Mechanical'},
+    {name: 'Axar', course:'Btech', branch:'Civil'},
+    {name: 'Jadeja', course:'Btech', branch:'CSE'},
+]
+
+// Chaining of method: filter()+map()+arrow()+callbacks
+const newArray = arr
+                    .filter((val) => val.branch === 'CSE')
+                    .map((val) => val.name)
 console.log(newArray)
