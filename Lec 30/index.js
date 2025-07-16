@@ -215,8 +215,33 @@ let arr = [
     {name: 'Jadeja', course:'Btech', branch:'CSE'},
 ]
 
-const newArray = arr.filter((val)=> val.branch=='Civil')
-console.log(newArray)
 
-const newArray2 = arr.filter((val)=> val.branch=='CSE')
-console.log(newArray2)
+// filter() + arrow_function ()
+// const newArray = arr.filter((val)=> val.branch=='Civil')
+// console.log(newArray)
+
+// const newArray2 = arr.filter((val)=> val.branch=='CSE')
+// console.log(newArray2)
+
+// const newArray = arr.filter((val)=> val.branch=='CSE')
+// console.log(newArray)
+
+// filter() + map() + arrow_function () 
+// const newArray2 = arr
+//   .filter(val => val.branch === 'CSE')  // Pehle CSE wale chuno
+//   .map(val => val.name);   
+
+// console.log(newArray2)
+
+const newArray = arr.filter((val)=>{
+    let fullName=''
+    if(val.branch == "CSE")
+    {
+        fullName+=val.name
+        return fullName
+        //console.log(fullName)
+    }
+})
+
+
+console.log(newArray)
