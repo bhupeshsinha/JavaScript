@@ -17,10 +17,22 @@ console.log("**************")
 //console.log(`Error: Outer let ${b}`)
 
 
+// function fun1()
+// {
+//     var name = "Ram Bhakt"
+//     console.log(name)
+// }
+
+// fun1()
+
+
+var name = "Jai Shri Ram"
 function fun1()
 {
-    var name = "Ram Bhakt"
     console.log(name)
+    hello = "Hanuman Ji"
+    console.log(`Auto Global Concept: ${hello}`)
 }
 
 fun1()
+console.log(name)
