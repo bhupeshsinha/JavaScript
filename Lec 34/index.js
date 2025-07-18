@@ -99,17 +99,51 @@ console.log("**************")
 
 
 
-// closures
-function makeFunc()
+// CLOSURES
+// function makeFunc()
+// {
+//     const name = "Jai Hanuman";
+//     function displayName()
+//     {
+//         console.log(name);
+//     }
+//     return displayName;
+// }
+
+// const myFunc = makeFunc();
+// console.log(myFunc)
+// console.log(myFunc())
+
+
+// Closure
+// function counter()
+// {
+//     let count=0;
+
+//     return function(num){
+//         return ++count+num;
+//     }
+// }
+
+// const increment = counter()
+// console.log(increment(10))
+
+
+// Closure + Callback
+
+function counter()
 {
-    const name = "Jai Hanuman";
-    function displayName()
-    {
-        console.log(name);
+    let count=0;
+
+    return function(fn){
+        return ++count+fn();
     }
-    return displayName;
 }
 
-const myFunc = makeFunc();
-console.log(myFunc)
-console.log(myFunc())
+function one()
+{
+    return 10
+}
+
+const increment = counter()
+console.log(increment(one))
