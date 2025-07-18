@@ -38,16 +38,61 @@ console.log("**************")
 
 
 //Callback: Passing function as a argument
-function one(fn)
+// function one(fn)
+// {
+//     fn();
+//     console.log("Hello Function One")
+//     fn();
+// }
+
+// function two()
+// {
+//     console.log("Hello Function Two")
+// }
+
+// one(two)
+
+// function one(para, fun)
+// {
+//     console.log(fun)
+//     console.log(para)
+//     fun()
+// }
+
+// function two()
+// {
+//     console.log("Hello Two")
+// }
+
+// // one(45, function(){
+// //     console.log("Anonymous Function")
+// // })
+
+// one(45, ()=>{
+//     console.log("Arrow: Anonymous Function")
+// })
+
+
+function add(a,b)
 {
-    fn();
-    console.log("Hello Function One")
-    fn();
+    console.log(a+b)
 }
 
-function two()
+function sub(a,b)
 {
-    console.log("Hello Function Two")
+    console.log(Math.abs(a-b))
 }
 
-one(two)
+function mul(a,b)
+{
+    console.log(a*b)
+}
+
+function Calci(num1, num2, fn)
+{
+    return fn(num1,num2)
+}
+
+Calci(10,20,add)
+Calci(10,20,sub)
+Calci(10,20,mul)
