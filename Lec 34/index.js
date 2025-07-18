@@ -131,19 +131,37 @@ console.log("**************")
 
 // Closure + Callback
 
-function counter()
-{
-    let count=0;
+// function counter()
+// {
+//     let count=0;
 
-    return function(fn){
-        return ++count+fn();
+//     return function(fn){
+//         return ++count+fn();
+//     }
+// }
+
+// function one()
+// {
+//     return 10
+// }
+
+// const increment = counter()
+// console.log(increment(one))
+
+
+function person()
+{
+    return {    //CLOSURES: Returning Function
+        first: function(){
+            return "Jai Hanuman"
+        },
+        second: function(){
+            return "Raam Doot Hanuman"
+        }
     }
 }
 
-function one()
-{
-    return 10
-}
-
-const increment = counter()
-console.log(increment(one))
+const output = person() //function expression
+console.log(output)
+console.log(output.first()) // calling function
+console.log(output.second())    // calling function
