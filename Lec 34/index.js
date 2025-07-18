@@ -73,26 +73,43 @@ console.log("**************")
 // })
 
 
-function add(a,b)
+// function add(a,b)
+// {
+//     console.log(a+b)
+// }
+
+// function sub(a,b)
+// {
+//     console.log(Math.abs(a-b))
+// }
+
+// function mul(a,b)
+// {
+//     console.log(a*b)
+// }
+
+// function Calci(num1, num2, fn)
+// {
+//     return fn(num1,num2)
+// }
+
+// Calci(10,20,add)
+// Calci(10,20,sub)
+// Calci(10,20,mul)
+
+
+
+// closures
+function makeFunc()
 {
-    console.log(a+b)
+    const name = "Jai Hanuman";
+    function displayName()
+    {
+        console.log(name);
+    }
+    return displayName;
 }
 
-function sub(a,b)
-{
-    console.log(Math.abs(a-b))
-}
-
-function mul(a,b)
-{
-    console.log(a*b)
-}
-
-function Calci(num1, num2, fn)
-{
-    return fn(num1,num2)
-}
-
-Calci(10,20,add)
-Calci(10,20,sub)
-Calci(10,20,mul)
+const myFunc = makeFunc();
+console.log(myFunc)
+console.log(myFunc())
