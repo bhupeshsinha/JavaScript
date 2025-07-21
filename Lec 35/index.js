@@ -36,10 +36,32 @@ console.log("**************")
 // console.log({}-5)
 // console.log([]-5)
 // console.log(5-undefined)
+// console.log("255"-5)
+// console.log("0"-5)
+// console.log("123.45"-5)
+// console.log("12RAM"-5)
+// console.log([]-5)
+// console.log(""-5)
+// console.log(5-true)
+// console.log(5-false)
+// console.log(null-true)
+// console.log(null-false)
+// console.log(Symbol("Ram")-5)
 
 
 // Abstract Operation
 // 1. ToPrimitive
 // 2. ToBoolean
-// 3. ToString
+// 3. ToString 
 // 4. ToNumber
+
+// console.log(undefined-NaN)
+// console.log(undefined-null)
+
+// Subtraction: used ToNumber()
+// Addition: Uses ToPrimitive() + ToString() + ToNumber()
+
+
+
+// ToPrimitive()
+console.log(5+{"a":10})
