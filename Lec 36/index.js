@@ -50,6 +50,29 @@ console.log("**************")
 //heading.removeAttribute("id")
 
 
-const newTag = document.createElement("p");
-newTag.setAttribute("id", "para")
-console.log(newTag)
+// const newTag = document.createElement("p");
+// newTag.setAttribute("id", "para")
+// newTag.innerText="Jananani mai Ram doot hanuman"
+
+// const body = document.getElementsByTagName("body")
+// body[0].append(newTag)
+// // document.append(newTag)
+// console.log(newTag)
+
+
+let data = ["Ram", "Shri Ram", "Jai Jai Ram", "Hanuman", "Mahaveer Hauman", "Brahmandnayak"]
+const ul = document.getElementById("specs")
+
+for(let i=0;i<data.length;i++)
+{
+    const liTag = document.createElement("li"); //will create list inside ul
+
+    liTag.style.backgroundColor="orange"
+    liTag.style.margin="2px"
+    liTag.style.color = "white"
+    liTag.style.borderRadius = "4px"
+    liTag.style.textAlign = "center"
+    liTag.innerText = data[i];
+
+    ul.append(liTag)
+}
