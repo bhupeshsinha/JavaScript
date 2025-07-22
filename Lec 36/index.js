@@ -31,8 +31,13 @@ console.log("**************")
 // console.log(heading[0].textContent)
 
 
-const heading = document.querySelector("h1")
-console.log(heading)
+// const heading = document.querySelector("h1")
+// console.log(heading)
 
-const heading2 = document.querySelectorAll("h1")
-console.log(heading2)
+// const heading2 = document.querySelectorAll("h1")
+// console.log(heading2)
+
+const heading = document.querySelector("h1")
+heading.style.backgroundColor = "orange"
+heading.style.border = "2px solid red"
+heading.style.borderRadius = "5px"
