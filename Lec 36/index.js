@@ -24,8 +24,15 @@ console.log("**************")
 // // heading.innerText = "Mere Shri Ram"
 // console.log(heading)
 
-const heading = document.getElementsByClassName('heelo')
-// heading.innerText = "Mere Shri Ram"
-console.log(heading[0].innerHTML)
-console.log(heading[0].innerText)
-console.log(heading[0].textContent)
+// const heading = document.getElementsByClassName('heelo')
+// // heading.innerText = "Mere Shri Ram"
+// console.log(heading[0].innerHTML)
+// console.log(heading[0].innerText)
+// console.log(heading[0].textContent)
+
+
+const heading = document.querySelector("h1")
+console.log(heading)
+
+const heading2 = document.querySelectorAll("h1")
+console.log(heading2)
