@@ -37,7 +37,19 @@ console.log("**************")
 // const heading2 = document.querySelectorAll("h1")
 // console.log(heading2)
 
-const heading = document.querySelector("h1")
-heading.style.backgroundColor = "orange"
-heading.style.border = "2px solid red"
-heading.style.borderRadius = "5px"
+// const heading = document.querySelector("h1")
+// heading.style.backgroundColor = "orange"
+// heading.style.border = "2px solid red"
+// heading.style.borderRadius = "5px"
+
+
+// const heading = document.querySelector("h1")
+// heading.setAttribute("class","heelo3")
+// heading.setAttribute("style", "background-color:orange")
+//heading.removeAttribute("class")
+//heading.removeAttribute("id")
+
+
+const newTag = document.createElement("p");
+newTag.setAttribute("id", "para")
+console.log(newTag)
