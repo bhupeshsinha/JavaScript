@@ -49,10 +49,11 @@ btn.addEventListener('click', (e) => {
 
     if(confirm("Color Change ?"))
     {
-    body.style.backgroundColor = "orange"
-    console.log(e.target)
-    console.log('Jai Siya Ram from js file, using event listener: ARROW FUNCTION')
+        const colorName = prompt("Which Colour?")
+        console.log(colorName)
+        body.style.backgroundColor = colorName
+        console.log(e.target)
     }
 
-
+    console.log('Jai Siya Ram from js file, using event listener: ARROW FUNCTION')
 })
