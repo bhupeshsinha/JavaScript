@@ -1,4 +1,4 @@
-
+/* 
 #mainDiv{
     background-color : palegreen;
 }
@@ -8,4 +8,31 @@
     height: 200px;
     width: 200px;
     background-color: #da9b9b;
+} */
+
+body{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.box1, .box2{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    margin:20px;
+    width:800px;
+    height:500px;
+    background-color: grey
+}
+
+.item{
+    margin:20px;
+    height:200px;
+    width:200px;
+    background-color: peru;
+    display:flex;
+    justify-content:center;
+    align-items:center;
 }
