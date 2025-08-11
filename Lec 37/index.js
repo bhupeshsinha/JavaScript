@@ -39,21 +39,21 @@ console.log("**************")
 // })
 
 
-const body = document.querySelector("body")
-const btn = document.getElementById('btn');
+// const body = document.querySelector("body")
+// const btn = document.getElementById('btn');
 
 
-btn.addEventListener('click', (e) => {
-    // e.target.innerText="change"
-    // alert("Jai Ram Jai Ram")
+// btn.addEventListener('click', (e) => {
+//     // e.target.innerText="change"
+//     // alert("Jai Ram Jai Ram")
 
-    if(confirm("Color Change ?"))
-    {
-        const colorName = prompt("Which Colour?")
-        console.log(colorName)
-        body.style.backgroundColor = colorName
-        console.log(e.target)
-    }
+//     if(confirm("Color Change ?"))
+//     {
+//         const colorName = prompt("Which Colour?")
+//         console.log(colorName)
+//         body.style.backgroundColor = colorName
+//         console.log(e.target)
+//     }
 
-    console.log('Jai Siya Ram from js file, using event listener: ARROW FUNCTION')
-})
+//     console.log('Jai Siya Ram from js file, using event listener: ARROW FUNCTION')
+// })
