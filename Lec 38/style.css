@@ -1,0 +1,11 @@
+
+#mainDiv{
+    background-color : palegreen;
+}
+
+.childDiv{
+    margin: 30px;
+    height: 200px;
+    width: 200px;
+    background-color: #da9b9b;
+}
