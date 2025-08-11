@@ -59,14 +59,40 @@ console.log("**************")
 // })
 
 
-const submit = document.getElementById("submit")
+// const submit = document.getElementById("submit")
+// const colorName = document.getElementById("colorName")
+// const body = document.querySelector("body")
+
+// submit.addEventListener('click',(e)=>{
+//     e.preventDefault()
+//     console.log(colorName.value)
+//     body.style.backgroundColor = colorName.value
+//     // console.log(e)
+
+// })
+
+
+// const btn = document.querySelector("#btn");
+// // const body = document.querySelector("body")
+// function random(number) {
+//   return Math.floor(Math.random() * (number + 1));
+// }
+
+// btn.addEventListener("click", () => {
+//   const rndCol = `rgb(${random(255)} ${random(255)} ${random(255)})`;
+//   console.log(rndCol)
+//   document.body.style.backgroundColor = rndCol;
+// });
+
+
 const colorName = document.getElementById("colorName")
-const body = document.querySelector("body")
+const textBox = document.getElementById("textBox")
 
-submit.addEventListener('click',(e)=>{
+colorName.addEventListener('input',(e)=>{
     e.preventDefault()
-    console.log(colorName.value)
-    body.style.backgroundColor = colorName.value
-    // console.log(e)
-
+    textBox.value = colorName.value
+    const p = document.createElement("p")
+    p.innerHTML = colorName.value
+    document.body.appendChild(p)
+    document.getElementById("pTag").innerText = colorName.value
 })
