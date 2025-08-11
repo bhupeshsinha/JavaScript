@@ -12,6 +12,7 @@ box.addEventListener('click', ()=>{
 })
 
 
+
 mainDiv.addEventListener('click', ()=>{
     console.log("Main Div")
     // box.style.backgroundColor='red'
