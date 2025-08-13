@@ -23,7 +23,7 @@ console.log("**************")
 //     console.log("Body")
 // },true)
 
-const box1 = document.querySelector(".box1")
+const box1 = document.querySelector(".box1")    
 const box2 = document.querySelector(".box2")
 const items = document.getElementsByClassName("item")
 
