@@ -67,3 +67,26 @@ btn.addEventListener('click', ()=>{
         // alert("Password Copied!")
         window.navigator.clipboard.writeText(newPass.innerText);
     });
+
+
+// Theme Toggle
+const themeToggle = document.getElementById("themeToggle");
+const themeIcon = themeToggle.querySelector("i");
+
+// Load saved theme from localStorage
+if (localStorage.getItem("theme") === "dark") {
+    document.body.classList.add("dark");
+    themeIcon.classList.replace("fa-moon", "fa-sun");
+}
+
+themeToggle.addEventListener("click", () => {
+    document.body.classList.toggle("dark");
+
+    if (document.body.classList.contains("dark")) {
+        themeIcon.classList.replace("fa-moon", "fa-sun");
+        localStorage.setItem("theme", "dark");
+    } else {
+        themeIcon.classList.replace("fa-sun", "fa-moon");
+        localStorage.setItem("theme", "light");
+    }
+});
