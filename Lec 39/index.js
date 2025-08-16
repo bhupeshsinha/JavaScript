@@ -130,10 +130,20 @@
 //     console.log("Hello! good Morning!")
 // }, 2000)
 
-console.log("Step 1")
+// console.log("Step 1")
 
-setTimeout(function(){
-    console.log("Step2: Hello! good Morning!")
-}, 2000)
+// setTimeout(function(){
+//     console.log("Step2: Hello! good Morning!")
+// }, 2000)
 
-console.log("Step 3")
+// console.log("Step 3")
+
+function fun1(text){
+    console.log("Starting Fun");
+    setTimeout(()=>{
+        console.log(text)
+    }, 4000);
+    console.log("Ending Fun");
+}
+
+fun1("Jai Siya Ram");
