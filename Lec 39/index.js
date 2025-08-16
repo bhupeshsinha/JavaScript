@@ -126,6 +126,14 @@
 // }
 // setInterval(bgChange, 0);
 
+// setTimeout(function(){
+//     console.log("Hello! good Morning!")
+// }, 2000)
+
+console.log("Step 1")
+
 setTimeout(function(){
-    console.log("Hello! good Morning!")
+    console.log("Step2: Hello! good Morning!")
 }, 2000)
+
+console.log("Step 3")
