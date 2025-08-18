@@ -138,12 +138,79 @@
 
 // console.log("Step 3")
 
-function fun1(text){
-    console.log("Starting Fun");
-    setTimeout(()=>{
-        console.log(text)
-    }, 4000);
-    console.log("Ending Fun");
-}
 
-fun1("Jai Siya Ram");
+
+//Closure = function + the variables it remembers from where it was created.
+// A function carries a "backpack 🎒" of the variables from the environment where it was created.
+
+
+// A closure in JavaScript is the combination of a function and the lexical environment within which that function was declared. This means that an inner function, defined within an outer function, retains access to the outer function's variables and parameters, even after the outer function has finished executing. 
+
+
+
+// function fun1(text){
+//     console.log("Starting Fun");
+//     console.log(text);
+//     setTimeout(()=>{
+//         console.log(text)
+//     }, 4000);
+//     console.log("Ending Fun");
+//     console.log(text);
+    
+//     text="Hare Krishna";
+//     console.log(text);
+// }
+
+// fun1("Jai Siya Ram");
+
+// function fun1(){
+//     for(var i=0;i<5;i++){
+//         setTimeout(function hello(){
+//             const a = i;
+//             console.log(a);
+//         }, i*1000);
+//     }
+// }
+
+// function fun1(){
+//     for(var i=0;i<5;i++){
+//         function inner(i){
+//             setTimeout(function hello(){
+//                 const a = i;
+//                 console.log(a);
+//             }, i*2000);
+//         }
+//         inner(i);
+//     }
+// }
+
+// function fun1(){
+//     for(var i=0;i<5;i++){
+
+//         let a = i;
+
+//         setTimeout(function hello(){
+            
+//             console.log(a);
+//         }, i*1000);
+//     }
+// }
+
+// fun1()
+
+console.log("Step 1")
+
+setTimeout(function(){
+    console.log("Step2: Hello! good Morning! SET  TIMEOUT 1")
+}, 8000)
+
+
+setTimeout(function(){
+    console.log("Step2: Hello! good Morning! SET  TIMEOUT 2")
+}, 5000)
+
+
+setTimeout(function(){
+    console.log("Step2: Hello! good Morning! SET  TIMEOUT 3")
+}, 3000)
+console.log("Step 3")
