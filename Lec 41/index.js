@@ -56,21 +56,35 @@
 // });
 
 
-function isData(item){
-    const promise1 = new Promise(function fun1(resolve, reject){
-        if(item){
-            console.log(item)
-            resolve("Promise RESOLVED / COMPLETED / FULL-FILLED");
-        }else{
-            reject("\nPromise Rejected /FAILED / INCOMPLETE");
-        }
-    });
+// function isData(item){
+//     const promise1 = new Promise(function fun1(resolve, reject){
+//         setTimeout(function timer1(){
+//                 if(item){
+//                 console.log(item)
+//                 resolve("Promise RESOLVED / COMPLETED / FULL-FILLED");
+//             }else{
+//                 reject("\nPromise Rejected /FAILED / INCOMPLETE");
+//             }
+//         }, 4000);
+//     });
 
-    return promise1;
-}
+//     return promise1;
+// }
 
-let result = isData("Jai Siya Ram");
+// let result = isData("Jai Siya Ram");
+// console.log(result);
 
-result.then(function onSuccess(result){
-    console.log(result);
-});
+// setTimeout(function hello(){
+//     console.log("Inside Set Timeout");
+// }, 6000);
+
+// result.then(function onSuccess(result){
+//     console.log(result);
+// });
+
+// console.log("END")
+
+// const x = Promise.resolve("SHORTCUT WAY");
+// console.log("Start")
+// console.log("END")
+// console.log(x)
