@@ -22,12 +22,13 @@ function API2(){
 let API3 = new Promise((res, rej) => {
         setTimeout(()=>{
             res("API3");
+            // rej("API3: REJECTED");
         }, 2000);
     })
 
 
 
-let x = Promise.allSettled([API1(),API2(),API3])
+let x = Promise.race([API1(),API2(),API3])
 .then((data)=>{
     console.log(data)
     console.log(data[0])
