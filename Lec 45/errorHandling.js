@@ -35,7 +35,7 @@ function payment(item, id){
             if(status){
                 resolve(status);
             }else{
-                reject(new Error("PAYMENT STATUS: FAILED"))
+                reject(new Error("PAYMENT STATUS: FAILED due to some technical issue!"))
             }
         }, 6000);
     });
@@ -71,5 +71,12 @@ searchFood("Chicken Biryani")
     .catch(
         function onRejection(err){
             console.log(err)
-    }
-    ) 
+    }) 
+    .finally(()=>{
+        console.log("FINALLY() will always be executed despite of resolve or failure");
+    })
+
+
+
+
+    
