@@ -29,6 +29,7 @@
 
 
 
+
 async function api(num1, num2){
     try{
         console.log("Jai Siya Ram");
@@ -41,6 +42,7 @@ async function api(num1, num2){
         console.log("Error Occured: ", err);
     }
 }
+
 
 
 document.getElementById("btn").addEventListener('click', ()=>{
