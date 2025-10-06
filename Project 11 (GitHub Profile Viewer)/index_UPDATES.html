@@ -1,76 +1,60 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth transition-colors duration-500">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Github Profile Viewer</title>
-  <link rel="stylesheet" href="style_updated.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GitHub Profile Viewer</title>
+
+  <!-- ✅ Tailwind CDN with dark mode set to 'class' -->
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          backgroundImage: {
+            'gradient-dark': 'linear-gradient(135deg, #0f172a, #1e293b)',
+            'gradient-light': 'linear-gradient(135deg, #dbeafe, #eff6ff)',
+          }
+        }
+      }
+    }
+  </script>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body class="light">
+<body class="bg-gradient-light dark:bg-gradient-dark min-h-screen flex flex-col items-center justify-center transition-colors duration-700 text-gray-800 dark:text-gray-100">
 
-  <div class="theme-toggle">
-    <button id="themeBtn">🌙 Dark Mode</button>
+  <!-- Header -->
+  <header class="flex justify-between items-center w-full max-w-4xl px-6 py-4 mb-10">
+    <h1 class="text-3xl font-extrabold tracking-wide">🌐 GitHub Profile Viewer</h1>
+    <button id="themeToggle"
+      class="rounded-full px-4 py-2 bg-indigo-600 hover:bg-indigo-700 text-white transition shadow-lg">
+      🌙 Dark Mode
+    </button>
+  </header>
+
+  <!-- Search -->
+  <div class="w-full max-w-2xl flex items-center gap-3 mb-10">
+    <input id="userID" type="text" placeholder="Enter GitHub username..."
+      class="flex-1 px-5 py-3 rounded-xl border-none shadow-md focus:ring-4 focus:ring-indigo-400 dark:bg-gray-800 dark:text-gray-200 placeholder-gray-400" />
+    <button id="btn"
+      class="px-6 py-3 bg-indigo-600 hover:bg-indigo-700 text-white font-semibold rounded-xl shadow-lg transition active:scale-95">
+      Search
+    </button>
   </div>
 
-  <div class="main">
-    <div class="firstDiv">
-      <h1>Github Profile Viewer</h1>
-      <div class="searchBox">
-        <input type="text" placeholder="Enter GitHub username">
-        <button>Search</button>
-      </div>
-    </div>
-
-    <div class="secondDiv">
-      <div class="userInfo">
-        <img src="https://avatars.githubusercontent.com/u/69009506?v=4" class="userImg" alt="">
-        <div class="userDetail">
-          <p class="userName">Bhupesh Sinha</p>
-          <p class="userBio">I AM BILLIONARE</p>
-        </div>
-      </div>
-
-      <div class="userFollow">
-        <div class="Follower">
-          <div class="repo">
-            <p>Follower</p>
-            <p>554K</p>
-          </div>
-          <div class="repo">
-            <p>Following</p>
-            <p>5</p>
-          </div>
-          <div class="repo">
-            <p>Repo</p>
-            <p>2187</p>
-          </div>
-        </div>
-
-        <div class="VisitProfile">
-          Visit Profile
-        </div>
-      </div>
-    </div>
+  <!-- Profile Card -->
+  <div id="userProfile"
+    class="hidden w-full max-w-3xl rounded-3xl p-8 backdrop-blur-lg bg-white/40 dark:bg-gray-800/40 shadow-2xl border border-gray-200/30 dark:border-gray-700/30 transition transform hover:scale-[1.01] duration-300">
   </div>
 
-  <script>
-    const themeBtn = document.getElementById("themeBtn");
-    const body = document.body;
+  <!-- Footer -->
+  <footer class="mt-10 text-sm text-gray-500 dark:text-gray-400">
+    Built with ❤️ by <span class="font-medium">You</span>
+  </footer>
 
-    themeBtn.addEventListener("click", () => {
-      if (body.classList.contains("light")) {
-        body.classList.remove("light");
-        body.classList.add("dark");
-        themeBtn.textContent = "☀️ Light Mode";
-      } else {
-        body.classList.remove("dark");
-        body.classList.add("light");
-        themeBtn.textContent = "🌙 Dark Mode";
-      }
-    });
-  </script>
-
+  <script src="index_updated.js"></script>
 </body>
+
 </html>
