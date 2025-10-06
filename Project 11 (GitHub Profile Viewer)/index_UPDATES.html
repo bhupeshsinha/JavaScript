@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Github Profile Viewer</title>
+  <link rel="stylesheet" href="style_updated.css">
+</head>
+
+<body class="light">
+
+  <div class="theme-toggle">
+    <button id="themeBtn">🌙 Dark Mode</button>
+  </div>
+
+  <div class="main">
+    <div class="firstDiv">
+      <h1>Github Profile Viewer</h1>
+      <div class="searchBox">
+        <input type="text" placeholder="Enter GitHub username">
+        <button>Search</button>
+      </div>
+    </div>
+
+    <div class="secondDiv">
+      <div class="userInfo">
+        <img src="https://avatars.githubusercontent.com/u/69009506?v=4" class="userImg" alt="">
+        <div class="userDetail">
+          <p class="userName">Bhupesh Sinha</p>
+          <p class="userBio">I AM BILLIONARE</p>
+        </div>
+      </div>
+
+      <div class="userFollow">
+        <div class="Follower">
+          <div class="repo">
+            <p>Follower</p>
+            <p>554K</p>
+          </div>
+          <div class="repo">
+            <p>Following</p>
+            <p>5</p>
+          </div>
+          <div class="repo">
+            <p>Repo</p>
+            <p>2187</p>
+          </div>
+        </div>
+
+        <div class="VisitProfile">
+          Visit Profile
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const themeBtn = document.getElementById("themeBtn");
+    const body = document.body;
+
+    themeBtn.addEventListener("click", () => {
+      if (body.classList.contains("light")) {
+        body.classList.remove("light");
+        body.classList.add("dark");
+        themeBtn.textContent = "☀️ Light Mode";
+      } else {
+        body.classList.remove("dark");
+        body.classList.add("light");
+        themeBtn.textContent = "🌙 Dark Mode";
+      }
+    });
+  </script>
+
+</body>
+</html>
