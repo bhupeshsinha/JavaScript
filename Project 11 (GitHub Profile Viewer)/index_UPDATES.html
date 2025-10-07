@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth transition-colors duration-500">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GitHub Profile Viewer</title>
+
+  <!-- ✅ Tailwind CDN with dark mode set to 'class' -->
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          backgroundImage: {
+            'gradient-dark': 'linear-gradient(135deg, #0f172a, #1e293b)',
+            'gradient-light': 'linear-gradient(135deg, #dbeafe, #eff6ff)',
+          }
+        }
+      }
+    }
+  </script>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gradient-light dark:bg-gradient-dark min-h-screen flex flex-col items-center justify-center transition-colors duration-700 text-gray-800 dark:text-gray-100">
+
+  <!-- Header -->
+  <header class="flex justify-between items-center w-full max-w-4xl px-6 py-4 mb-10">
+    <h1 class="text-3xl font-extrabold tracking-wide">🌐 GitHub Profile Viewer</h1>
+    <button id="themeToggle"
+      class="rounded-full px-4 py-2 bg-indigo-600 hover:bg-indigo-700 text-white transition shadow-lg">
+      🌙 Dark Mode
+    </button>
+  </header>
+
+  <!-- Search -->
+  <div class="w-full max-w-2xl flex items-center gap-3 mb-10">
+    <input id="userID" type="text" placeholder="Enter GitHub username..."
+      class="flex-1 px-5 py-3 rounded-xl border-none shadow-md focus:ring-4 focus:ring-indigo-400 dark:bg-gray-800 dark:text-gray-200 placeholder-gray-400" />
+    <button id="btn"
+      class="px-6 py-3 bg-indigo-600 hover:bg-indigo-700 text-white font-semibold rounded-xl shadow-lg transition active:scale-95">
+      Search
+    </button>
+  </div>
+
+  <!-- Profile Card -->
+  <div id="userProfile"
+    class="hidden w-full max-w-3xl rounded-3xl p-8 backdrop-blur-lg bg-white/40 dark:bg-gray-800/40 shadow-2xl border border-gray-200/30 dark:border-gray-700/30 transition transform hover:scale-[1.01] duration-300">
+  </div>
+
+  <!-- Footer -->
+  <footer class="mt-10 text-sm text-gray-500 dark:text-gray-400">
+    Built with ❤️ by <span class="font-medium">You</span>
+  </footer>
+
+  <script src="index_updated.js"></script>
+</body>
+
+</html>

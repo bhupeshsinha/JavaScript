@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GitHub Profile Viewer</title>
+  <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+
+  <div class="container">
+    <header class="header">
+      <h1>GitHub Profile Viewer</h1>
+      <button id="theme-toggle" aria-label="Toggle Theme">
+        <span id="theme-icon">🌙</span>
+      </button>
+    </header>
+
+    <div class="search-box">
+      <input type="text" id="userID" placeholder="Enter GitHub username...">
+      <button id="btn">Search</button>
+    </div>
+
+    <section id="userProfile" class="profile-section">
+      <p class="placeholder">Search for a GitHub user to see their profile...</p>
+    </section>
+  </div>
+
+  <script>
+    const themeBtn = document.getElementById('theme-toggle');
+    const themeIcon = document.getElementById('theme-icon');
+    const body = document.body;
+
+    // Toggle theme
+    themeBtn.addEventListener('click', () => {
+      body.classList.toggle('dark-theme');
+      const darkMode = body.classList.contains('dark-theme');
+      themeIcon.textContent = darkMode ? '☀️' : '🌙';
+    });
+
+    const userInput = document.getElementById('userID');
+    const profileDiv = document.getElementById('userProfile');
+
+    document.getElementById('btn').addEventListener('click', () => {
+      const userId = userInput.value.trim();
+      if (userId) fetchUser(userId);
+    });
+
+    async function fetchUser(userId) {
+      profileDiv.innerHTML = `<div class="loading">Fetching user data...</div>`;
+      const response = await fetch(`https://api.github.com/users/${userId}`);
+      const data = await response.json();
+
+      if (data.message === 'Not Found') {
+        profileDiv.innerHTML = `<h2 class="not-found">❌ User Not Found</h2>`;
+        return;
+      }
+      displayUser(data);
+    }
+
+    function displayUser({ avatar_url, name, bio, followers, following, public_repos, html_url }) {
+      profileDiv.innerHTML = `
+        <div class="card glass">
+          <div class="profile-image">
+            <img src="${avatar_url}" alt="${name}">
+          </div>
+          <h2>${name || 'No Name Available'}</h2>
+          <p class="bio">${bio || 'No bio provided.'}</p>
+
+          <div class="stats">
+            <div><strong>${followers}</strong><span>Followers</span></div>
+            <div><strong>${following}</strong><span>Following</span></div>
+            <div><strong>${public_repos}</strong><span>Repos</span></div>
+          </div>
+
+          <a href="${html_url}" target="_blank" class="visit-btn">Visit Profile</a>
+        </div>
+      `;
+    }
+  </script>
+
+</body>
+</html>
