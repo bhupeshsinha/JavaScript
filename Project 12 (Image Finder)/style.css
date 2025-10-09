@@ -29,7 +29,8 @@ body{
 }
 
 .singleImg{
-    background-color: #737373;
+    background-color: #edecec;
+    border: 1px solid;
     padding: 20px;
     border-radius: 15px;
 }

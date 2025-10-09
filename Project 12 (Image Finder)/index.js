@@ -4,6 +4,7 @@ const ACCESS_TOKEN = 'jxTWcfzcIQb-V2t3Z6mANMt7I7hl7XcefBhKGRTk4W4';
 let keyword = document.getElementById('keyword');
 
 document.getElementById('btn').addEventListener('click', ()=>{
+    document.getElementById('allImg').innerHTML = '';
     let val = keyword.value;
     fetchImg(val);
 }) 
@@ -21,10 +22,9 @@ function displayImg(res){
     // console.log(keyword.value);
     res.results.map(data => {
         let div = document.createElement('div');
-        div.setAttribute('class', "singleImg");
+        div.setAttribute('class', 'singleImg');
 
         div.innerHTML = `
-        <div class="singleImg">
                 <div class="firstDiv">
                     <img src=${data.user.profile_image.large} alt="" class="userImg">
                     <p class="userName">${data.user.name}</p>
@@ -33,7 +33,6 @@ function displayImg(res){
                     <img src=${data.urls.regular} alt="" class="mainImg">
                     <p class="imgDes">${data.alt_description}</p>
                 </div>
-        </div>
         `;
         // console.log(div);
         document.getElementById('allImg').appendChild(div);
