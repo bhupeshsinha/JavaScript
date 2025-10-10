@@ -19,7 +19,9 @@ async function fetchImg(val) {
     let result = await response.json();
 
     if(result.results.length < 1){
-        document.getElementById('allImg').innerHTML = '<h2>NOT FOUND!</h2>'; 
+        document.getElementById('allImg').innerHTML = '<h2>NOT FOUND, Please Enter A Valid Keyword</h2>'; 
+        document.getElementById('loadMoreBtn').classList.remove('visible');
+        document.getElementById('clearAllBtn').classList.remove('visible');
     }else{
         displayImg(result);
     }
