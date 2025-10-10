@@ -4,7 +4,8 @@ const ACCESS_TOKEN = 'jxTWcfzcIQb-V2t3Z6mANMt7I7hl7XcefBhKGRTk4W4';
 let keyword = document.getElementById('keyword');
 let val;
 let page = 1;
-document.getElementById('btn').addEventListener('click', ()=>{
+document.getElementById('btn').addEventListener('click', (e)=>{
+    e.preventDefault()
     document.getElementById('allImg').innerHTML = '';
     val = keyword.value;
     keyword.value = '';
