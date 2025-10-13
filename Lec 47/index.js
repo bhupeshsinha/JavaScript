@@ -18,9 +18,22 @@
    
 // })
 
-document.getElementById("in").addEventListener('input', (e)=>{
+// document.getElementById("in").addEventListener('input', (e)=>{
+// //    console.log(e.target.value);
+//     localStorage.setItem('data', e.target.value);
+//     document.getElementById('h1').innerText = localStorage.getItem('data');
+// })
+// document.getElementById('h1').innerText = localStorage.getItem('data'); 
+
+
+document.getElementById("btn").addEventListener('click', (e)=>{
 //    console.log(e.target.value);
-    localStorage.setItem('data', e.target.value);
+    localStorage.setItem('data', {name: "Ram Doot", rollNo: 143});
+    localStorage.setItem('data', JSON.stringify({name: "Ram Doot", rollNo: 143}));
     document.getElementById('h1').innerText = localStorage.getItem('data');
 })
-document.getElementById('h1').innerText = localStorage.getItem('data');
+document.getElementById('h1').innerText = localStorage.getItem('data'); 
+
+
+console.log({name: "Ram Doot", rollNo: 143})
+console.log(String({name: "Ram Doot", rollNo: 143}))
