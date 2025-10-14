@@ -26,14 +26,48 @@
 // document.getElementById('h1').innerText = localStorage.getItem('data'); 
 
 
+// document.getElementById("btn").addEventListener('click', (e)=>{
+// //    console.log(e.target.value);
+//     localStorage.setItem('data', {name: "Ram Doot", rollNo: 143});
+//     localStorage.setItem('data', JSON.stringify({name: "Ram Doot", rollNo: 143}));
+//     localStorage.setItem('data', JSON.stringify({name: "Janani Main Ram Doot Hanuman", rollNo: 143143}));
+//     document.getElementById('h1').innerText = localStorage.getItem('data');
+// })
+// document.getElementById('h1').innerText = localStorage.getItem('data'); 
+
+
+// console.log({name: "Ram Doot", rollNo: 143})
+// console.log(String({name: "Ram Doot", rollNo: 143}))
+// console.log(JSON.stringify({name: "Janani Main Ram Doot Hanuman", rollNo: 143143}))
+
+// document.getElementById("btn").addEventListener('click', (e)=>{
+// //    console.log(e.target.value);
+//     localStorage.setItem('data', {name: "Ram Doot", rollNo: 143});
+//     localStorage.setItem('data', JSON.stringify({name: "Ram Doot", rollNo: 143}));
+//     localStorage.setItem('data', JSON.stringify({name: "Janani Main Ram Doot Hanuman", rollNo: 143143}));
+//     let data = JSON.parse(localStorage.getItem('data'));
+
+//     document.getElementById('h2').innerText = JSON.parse(localStorage.getItem('data')).rollNo;
+//     document.getElementById('h1').innerText = data.name
+// })
+// document.getElementById('h1').innerText = JSON.parse(localStorage.getItem('data')).name;
+// document.getElementById('h2').innerText = JSON.parse(localStorage.getItem('data')).rollNo;
+
+
 document.getElementById("btn").addEventListener('click', (e)=>{
-//    console.log(e.target.value);
+    let name= document.getElementById('name').value;
+    let rollNo= document.getElementById('rollNo').value;
+
     localStorage.setItem('data', {name: "Ram Doot", rollNo: 143});
-    localStorage.setItem('data', JSON.stringify({name: "Ram Doot", rollNo: 143}));
-    document.getElementById('h1').innerText = localStorage.getItem('data');
+    localStorage.setItem('data', JSON.stringify({name: name, rollNo: rollNo}));
+
+    let data = JSON.parse(localStorage.getItem('data'));
+
+    document.getElementById('h2').innerText = JSON.parse(localStorage.getItem('data')).rollNo;
+    document.getElementById('h1').innerText = data.name
 })
-document.getElementById('h1').innerText = localStorage.getItem('data'); 
 
 
-console.log({name: "Ram Doot", rollNo: 143})
-console.log(String({name: "Ram Doot", rollNo: 143}))
+document.getElementById('h1').innerText = JSON.parse(localStorage.getItem('data')).name;
+document.getElementById('h2').innerText = JSON.parse(localStorage.getItem('data')).rollNo;
+
