@@ -10,3 +10,7 @@
     background-color: #f4f4f4;
     gap: 20px;
 }
+
+.completed{
+    text-decoration: line-through;
+}
