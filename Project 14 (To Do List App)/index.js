@@ -42,11 +42,15 @@ let todoInput = document.getElementById('todoInput');
 }
 
 
-
-
 document.getElementById('addBtn').addEventListener('click', (e)=>{
     e.preventDefault();
+
+    let arr = []
+
     let todoVal = todoInput.value;
+
+    arr.push(todoInput);
+
     console.log(todoVal);
     let div = document.createElement('div');
     div.setAttribute('class', 'singleTodo');
@@ -70,5 +74,8 @@ document.getElementById('addBtn').addEventListener('click', (e)=>{
     });
 
     document.getElementById('allTodo').appendChild(div);
+
+    localStorage.setItem('allTodo', JSON.stringify(arr));
+
     todoInput.value = '';
 });
