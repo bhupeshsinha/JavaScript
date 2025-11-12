@@ -41,22 +41,20 @@ let todoInput = document.getElementById('todoInput');
 // });
 }
 
-let arr = []
+let data = JSON.parse(localStorage.getItem('allTodo')) || [];
 
-document.getElementById('addBtn').addEventListener('click', (e)=>{
-    e.preventDefault();
+function displayTodo(){
+    document.getElementById('allTodo').innerHTML = '';
+    data.map((singleTodo, id)=>{
+        todoStructure(singleTodo, id);
+    })
+}
 
-    let todoVal = todoInput.value;
-
-    arr.push(todoVal);
-
-    console.log(todoVal);
+function todoStructure(singleTodo, id){
     let div = document.createElement('div');
     div.setAttribute('class', 'singleTodo');
-    // div.setAttribute("id", id++);
-    // div.setAttribute("id", id);
     div.innerHTML = `
-                <h2 id="taskToDo">${todoVal}</h2>
+                <h2>${singleTodo.todoVal}</h2>
                 <input type="checkbox" name="" id="">
                 <button >Remove Task</button>
             `;
@@ -66,15 +64,42 @@ document.getElementById('addBtn').addEventListener('click', (e)=>{
 
     btn[0].addEventListener('click', (e)=>{{
         e.target.parentNode.remove();
+        removeToDo(id);
     }});
+
+    if(singleTodo.completed){
+        inp[0].previousElementSibling.classList.add('completed');
+        inp[0].checked = true;
+    }
 
     inp[0].addEventListener('click', (e)=>{
         e.target.previousElementSibling.classList.toggle('completed');
+        toggleTodo(id);
     });
 
-    document.getElementById('allTodo').appendChild(div);
+    document.getElementById('allTodo').appendChild(div);    
+}
 
-    localStorage.setItem('allTodo', JSON.stringify(arr));
+document.getElementById('addBtn').addEventListener('click', (e)=>{
+    e.preventDefault();
 
+    let todoVal = todoInput.value;
+    data.push({todoVal, completed: false});
+    console.log(todoVal);
+    localStorage.setItem('allTodo', JSON.stringify(data));
+    displayTodo();
     todoInput.value = '';
 });
+
+function removeToDo(id){
+    data.splice(id, 1);
+    localStorage.setItem('allTodo', JSON.stringify(data));
+    displayTodo();
+}
+
+function toggleTodo(id){
+    data[id].completed = !data[id].completed;
+    localStorage.setItem('allTodo', JSON.stringify(data));
+}
+
+displayTodo();
