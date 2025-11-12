@@ -41,15 +41,14 @@ let todoInput = document.getElementById('todoInput');
 // });
 }
 
+let arr = []
 
 document.getElementById('addBtn').addEventListener('click', (e)=>{
     e.preventDefault();
 
-    let arr = []
-
     let todoVal = todoInput.value;
 
-    arr.push(todoInput);
+    arr.push(todoVal);
 
     console.log(todoVal);
     let div = document.createElement('div');
